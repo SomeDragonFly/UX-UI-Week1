@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Loading Screen</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .loading-screen {
+            text-align: center;
+        }
+
+        .loading-bar {
+            width: 100%;
+            background-color: #333;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 20px;
+            margin: 20px 0;
+        }
+
+        .progress {
+            width: 0;
+            height: 100%;
+            background-color: #4CAF50;
+            animation: loading 2s linear infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loading-bar">
+            <div class="progress"></div>
+        </div>
+        <p>Loading...</p>
+    </div>
+</body>
+</html>
